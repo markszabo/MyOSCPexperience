@@ -4,14 +4,12 @@ use warnings;
 use Cwd;
 
 my @targets = (
-#"192.168.21.67",
-#"192.168.21.53",
-"192.168.21.55",
-"192.168.21.161"
+#"192.168.1.1",
+#"192.168.1.2" TODO insert IPs here
 );
 
-my $exam_folder = "exam/";
-my $interface = "tap0"; #TODO change to tap0
+my $exam_folder = "exam/"; #TODO create this folder
+my $interface = "tap0"; #TODO change to the interface
 
 chdir($exam_folder) or die "cannot change: $!\n";
 
