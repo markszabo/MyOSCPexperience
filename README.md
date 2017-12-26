@@ -45,8 +45,12 @@ Some of them are more esoteric than others, so if you are stuck, look up a walkt
 
 ## Buffer overflow
 
-On the exam you will have one buffer overflow machine for sure, usually very similar to the one on the pdf. For preparation I have also done this BoF excercise: http://justpentest.blogspot.hu/2015/07/minishare1.4.1-bufferoverflow.html (even though on my 64bit windows VM I have not found any library with no protection mechanism).
+On the exam you will have one buffer overflow machine for sure, usually very similar to the one on the pdf. For preparation I have also done this BoF exercise: http://justpentest.blogspot.hu/2015/07/minishare1.4.1-bufferoverflow.html (even though on my 64bit windows VM I have not found any library with no protection mechanism).
 
 ## Exam schedule
 
 There are multiple strategies to schedule the 23:45 hour exam. I have started it at noon, so that I can sleep some after midnight and have a fresh start next morning. In the end I was lucky enough to have 75 points before midnight, so went to sleep and did the reporting next morning while still having access to the machines. I have submitted the report on that afternoon and got the results next day evening.
+
+## The Exam
+
+I have prepared a small script to run unicron scan on all TCP and UDP ports (massively parallel SYN scan), nmap -A on the resulted ports, nikto on the http(s) ports and enum4linux no matter what (since smb/samba is often an attack vector, it doesn't hurt to do some recon). My script is available in this repo. I have started with the buffer-overflow machine and the script was running meanwhile. Then it was faster to just review the scripts output and follow with the attack afterwards.
